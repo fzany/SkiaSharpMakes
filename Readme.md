@@ -6,8 +6,8 @@ The following samples are included:
 
 1) Eliptic Circles
 
-![](https://github.com/fzany/SkiaSharpMakes/blob/master/share1.gif)
-![](https://github.com/fzany/SkiaSharpMakes/blob/master/share2.gif)
+![](https://github.com/fzany/SkiaSharpMakes/blob/master/share1.png)
+![](https://github.com/fzany/SkiaSharpMakes/blob/master/share2.png)
 ![in action](https://github.com/fzany/SkiaSharpMakes/blob/master/rota1.gif)
 
 ![in action](https://github.com/fzany/SkiaSharpMakes/blob/master/rota2.gif)
