@@ -68,7 +68,8 @@ namespace SkiaSharpMakes.Views
                 fillMarkDotCirclePaint.Style = SKPaintStyle.Fill;
                 for (int ii = 0; ii < eliptic_circle_iterator; ii++)
                 {
-                    fillMarkDotCirclePaint.Color = Color.FromHex(General.Colors[ii]).ToSKColor();
+                    Math.DivRem(ii, General.Colors.Count, out int colorIndex);
+                    fillMarkDotCirclePaint.Color = Color.FromHex(General.Colors[colorIndex]).ToSKColor();
                     //calculate the  point on the circle
 
                     General.PointOnCircle(radius, eliptic_circle_test_angle, center.X, center.Y, out float circle_x, out float circle_y);
