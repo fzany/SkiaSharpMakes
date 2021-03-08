@@ -11,6 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpMakes.iOS", "SkiaS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiaSharpMakes", "SkiaSharpMakes\SkiaSharpMakes.csproj", "{B4D31590-9FD7-40E5-80E2-B9DA9296CA4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4AB06CF-BE6A-46F6-9E66-893CD105774F}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+		rota1.gif = rota1.gif
+		rota2.gif = rota2.gif
+		share1.png = share1.png
+		share2.png = share2.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

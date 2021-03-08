@@ -87,22 +87,13 @@ namespace SkiaSharpMakes.Views
 
         private void IncrementDegrees()
         {
+            if (_degrees >= 360)
+                _degrees = _degrees - 360;
+
             if (_reverseSpinning)
-            {
-                if (_degrees >= 360)
-                {
-                    _degrees = _degrees - 360;
-                }
                 _degrees -= 3.6f;
-            }
             else
-            {
-                if (_degrees >= 360)
-                {
-                    _degrees = _degrees - 360;
-                }
                 _degrees += 3.6f;
-            }
         }
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
