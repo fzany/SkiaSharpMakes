@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpMakes.Views.ElipticCircle" Title="Eliptic Circles">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <skia:SKCanvasView x:Name="skiaView" PaintSurface="OnCanvasViewPaintSurface" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent"/>
+
+
+            <Label Text="Rotate" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
+            <Switch OnColor="Orange" ThumbColor="Green" x:Name="rotateSwitch" IsToggled="False" Toggled="rotateSwitch_Toggled" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"/>
+            <Label Text="Speed: 9" x:Name="speedLabel" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+            <Stepper Increment="1" Minimum="1"  Maximum="9" Value="9" ValueChanged="Stepper_Rotation_ValueChanged" Grid.Row="2" Grid.Column="1" BackgroundColor="LightGoldenrodYellow"/>
+            <Label Text="Direction" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference directionSwitch}, Path=IsToggled}" Value="true">
+                        <Setter Property="Text" Value="Direction ↪"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference directionSwitch}, Path=IsToggled}" Value="false">
+                        <Setter Property="Text" Value="Direction ↩"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Switch OnColor="Orange" ThumbColor="Green" x:Name="directionSwitch" IsToggled="False" Toggled="directionSwitch_Toggled" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center"/>
+
+           
+            <Label Text="Number: 8" x:Name="numberLabel" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"/>
+            <Stepper Increment="1" Minimum="1"  Maximum="360" Value="8" ValueChanged="Stepper_ValueChanged" Grid.Row="4" Grid.Column="0" BackgroundColor="LightSlateGray"/>
+            <Label Text="Explode" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
+            <Stepper Increment="5" Minimum="20"  Maximum="100" Value="50" ValueChanged="Stepper_Offset_ValueChanged" Grid.Row="4" Grid.Column="1" BackgroundColor="LightBlue"/>
+            <Label Text="Ball Size" Grid.Row="3" Grid.Column="2" HorizontalOptions="Center"/>
+            <Stepper Increment="1" Minimum="1"  Maximum="100" Value="30" ValueChanged="Stepper_Ball_Size_ValueChanged" Grid.Row="4" Grid.Column="2" BackgroundColor="LightPink"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkiaSharpMakes.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace SkiaSharpMakes
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ElipticCircle());
         }
     }
 }
